@@ -3,7 +3,7 @@
 # The contains point method should go through
 # each of those boxes and determine if the given
 # point is within its bounds using the
-# contains point method.
+# contains point method from BoundingBox.
 
 class BoundingArea
 
@@ -17,10 +17,17 @@ class BoundingArea
     # returns true if given (x,y) coordinate
     # is contained within **any** bounding boxes
     # for this area
+
     if @boxes == []
       false
     else
-
+      @boxes.each do |box|
+        if box.contains_point?(x,y) == true
+          return true
+        else
+          return false
+        end
+      end
     end
   end
 end
