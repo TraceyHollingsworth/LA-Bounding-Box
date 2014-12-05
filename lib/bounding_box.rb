@@ -14,12 +14,7 @@ class BoundingBox
     @top = @bottom + @height #returns box top edge
   end
 
-  def contains_point?(x,y)
-    #returns true if given (x,y) is within box
-    if x >= @left && x <= @right && y >= @bottom && y <= @top
-      true
-    else
-      false
-    end
+  def contains_point?(x,y) #returns true if given (x,y) is within box
+    x >= @left && x <= @right && y >= @bottom && y <= @top
   end
 end
