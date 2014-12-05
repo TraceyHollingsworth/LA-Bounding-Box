@@ -9,7 +9,7 @@ class BoundingArea
 
   attr_reader :boxes
 
-  def initialize(boxes = [])
+  def initialize(boxes)
     @boxes = boxes
   end
 
