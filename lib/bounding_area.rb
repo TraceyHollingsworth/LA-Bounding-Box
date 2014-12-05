@@ -14,20 +14,8 @@ class BoundingArea
   end
 
   def contains_point?(x,y)
-    # returns true if given (x,y) coordinate
-    # is contained within **any** bounding boxes
-    # for this area
-
-    if @boxes == []
-      false
-    else
-      @boxes.each do |box|
-        if box.contains_point?(x,y) == true
-          return true
-        else
-          return false
-        end
-      end
+    @boxes.any? do |box|
+      box.contains_point?(x,y)
     end
   end
 end
