@@ -1,17 +1,25 @@
+#BoundingBox.new(left, bottom, width, height)
+
 class BoundingBox
 
   attr_reader :width, :height, :left, :right, :top, :bottom
 
-  def initialize(width, height, left, bottom)
-    @width = width #returns the width of the box
-    @height = height #returns the height of the box
-    @left = left #returns the left edge of the box
-    @bottom = bottom #returns the bottom edge of the box
+  def initialize(left, bottom, width, height)
+    @width = width #returns box width
+    @height = height #returns box height
+    @left = left #returns box left edge
+    @bottom = bottom #returns box bottom edge
 
-    @right = @left + @width #returns the right edge of the box
-    @top = @bottom + @height #returns the top edge of the box
+    @right = @left + @width #returns box right edge
+    @top = @bottom + @height #returns box top edge
   end
 
-  def contains_point?()
+  def contains_point?(x,y)
+  #returns true if given (x,y) is within box
+    if #math
+      true
+    else
+      false
+    end
   end
 end

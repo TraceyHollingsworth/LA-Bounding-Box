@@ -4,6 +4,6 @@ class BoundingArea
   def initialize()
   end
 
-  def contains_point?()
+  def contains_point?(x,y)
   end
 end
